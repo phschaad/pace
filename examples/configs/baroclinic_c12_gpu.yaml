@@ -11,16 +11,16 @@ initialization:
     case: baroclinic
 performance_config:
   collect_performance: true
-  experiment_name: c384_baroclinic_gpu
-nx_tile: 384
+  experiment_name: c180_baroclinic_cpu
+nx_tile: 12
 nz: 79
 dt_atmos: 450
-days: 450
+seconds: 450
 layout:
   - 1
   - 1
 diagnostics_config:
-  path: /iopsstor/scratch/cscs/phschaad/c384_gpu_output
+  path: output
   output_format: netcdf
   names:
     - u
@@ -99,3 +99,4 @@ grid_config:
   type:  generated
   config:
     eta_file: 'tests/main/input/eta79.nc'
+
